@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>game-rock-paper-scissor</title>
+        <style>
+            *{
+                background-image: url("./assets/bg.png");
+            }
+            #score{
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: center;
+                gap:30px;
+                color: white;
+                font-size: xx-large;
+                font-weight: bolder;
+                margin-top: 100px;
+            }
+            .box{
+                height:400px;
+                width: 400px;
+                border:solid red ;
+            }
+            #dash{
+                font-size:xx-large; 
+                align-items: center;
+                justify-content: center;
+            }
+            #human{
+                display: grid;
+                grid-auto-flow: row;
+                
+                
+                
+            }
+            #match{
+                display: grid;
+               grid-auto-flow: column;
+               gap:40px;
+               justify-content: space-around;
+               margin-top: 20px;
+               color: white;
+               text-align: center;
+            }
+            #logo{
+                display:flex;
+                justify-content: space-between;
+                align-items: end;
+            }
+            #result{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="score">
+            <div ><span id="human-score" >0</div>
+            <div id="dash">-</div>
+            <div><span id="comp_score">0</div>
+        </section>
+        <section id="match">
+            <div id="human" class="box" ><h1>you</h1>
+                <div><img id="img"src=""></div>
+                <div id="logo">
+                <div  ><img class="btn" id="paper" src="./assets/paper-logo.png"></div>
+                <div  ><img class="btn" id="rock"src="./assets/rock-logo.png"></div>
+                <div  ><img class="btn" id="scissor" src="./assets/scissors-logo.png"></div>
+            </div></div>
+            <div id="vs"><img src="./assets/vs.png"></div>
+            <div id="comp" class="box">comp
+                <div><img class="btn" id="c_img" src=""></div>
+            </div>
+        </section>
+        <section id="result">
+            <p id="winner" style="color:white"></p>
+            <div id="replay" style="color:white"></div>
+        </section>
+       <script src="game.js"></script>
+    </body>
+</html>
